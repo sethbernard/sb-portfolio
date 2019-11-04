@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 0.5px solid #eee;
+
+  .logo {
+    margin-right: 2rem;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+
+    li {
+      margin-left: 3rem;
+      font-size: 0.875rem;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #111;
+  }
+}
