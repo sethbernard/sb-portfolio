@@ -85,14 +85,14 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 4rem 0;
-  height: 100vh;
+  padding-bottom: 1.5rem;
+  min-height: 100vh;
   background-color: $off-white;
 
   h2 {
     font-size: $medium-heading;
     text-align: center;
-    padding: 2rem;
+    margin: 1.5rem 0;
   }
 }
 
@@ -103,8 +103,7 @@ nav {
 
 #design-card {
   display: block;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
 }
 
 .far,
@@ -116,12 +115,12 @@ nav {
 
 .card {
   flex-direction: column;
-  width: 30vw;
-  padding: 1.5rem 0;
+  width: 25vw;
+  padding: 2rem 0;
   box-shadow: $card-shadow;
   border-radius: 10px;
   background-color: white;
-  margin: 0 2rem;
+  margin: 0 1.5rem;
 }
 
 .card-logo-layer {
