@@ -61,22 +61,24 @@ nav {
   height: calc(100% - 4.4rem);
   @include dark-overlay;
   padding: 2rem;
+
+  header {
+    z-index: 2;
+
+    h1 {
+      color: $off-white;
+      font-size: 8rem;
+    }
+
+    h2 {
+      color: $off-white;
+      font-size: $medium-heading;
+    }
+  }
 }
+
 .hero::after {
   background: rgba(0, 0, 0, 0.5);
-}
-
-.hero {
-  z-index: 2;
-
-  header h1 {
-    color: $off-white;
-    font-size: 8rem;
-  }
-  header h2 {
-    color: $off-white;
-    font-size: $medium-heading;
-  }
 }
 
 // Skills Section
