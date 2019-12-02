@@ -163,7 +163,7 @@ nav {
   h2 {
     font-size: $medium-heading;
     padding: 1.5rem;
-    background-color: lightslategrey;
+    background-color: #eee;
     text-align: center;
   }
 }
@@ -224,7 +224,7 @@ nav {
   display: flex;
 
   img.devices {
-    max-width: 95%;
+    max-width: 90%;
     height: auto;
     display: block;
     margin: auto;
