@@ -183,6 +183,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 1.5rem;
 
   h3 {
     font-size: $small-heading;
@@ -206,12 +207,11 @@ nav {
   .external-links {
     display: flex;
     justify-content: center;
+    align-content: center;
     padding-top: 2rem;
 
-    .button:first-child {
-      margin-right: 2rem;
-    }
     .button {
+      margin-right: 2rem;
       padding: 1rem;
       border: 2px solid black;
       text-decoration: none;
