@@ -25,6 +25,7 @@ body {
 body {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
+  position: absolute;
 }
 
 // Navbar section
@@ -116,13 +117,6 @@ nav {
   margin-top: 3rem;
 }
 
-.far,
-.fa-file-code,
-.fas,
-.fa-tools {
-  font-size: 4rem;
-}
-
 .card {
   flex-direction: column;
   width: 25vw;
@@ -135,6 +129,18 @@ nav {
 
 .card-logo-layer {
   text-align: center;
+
+  i {
+    position: relative;
+    z-index: 1000;
+    font-size: 4rem;
+    text-align: center;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    box-shadow: $card-shadow;
+    padding: 2rem;
+  }
 }
 
 .card-header {
