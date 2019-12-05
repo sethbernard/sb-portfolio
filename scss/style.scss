@@ -203,6 +203,7 @@ nav {
   }
   .work-icons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
 
@@ -241,7 +242,8 @@ nav {
   }
 }
 
-#project-refuge {
+#project-refuge,
+#giphy-search {
   flex-direction: row-reverse;
   background-color: #eee;
 }
