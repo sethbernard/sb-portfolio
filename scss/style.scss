@@ -200,6 +200,12 @@ nav {
   p {
     padding: 1rem 3rem 2rem;
     line-height: 1.6;
+
+    .bold-link {
+      text-decoration: none;
+      color: #000;
+      font-weight: 700;
+    }
   }
   .work-icons {
     display: flex;
