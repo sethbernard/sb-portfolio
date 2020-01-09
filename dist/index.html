@@ -29,7 +29,7 @@
     <section class="hero">
       <header>
         <h1>Hi, I'm Seth.</h1>
-        <h2>Front-End Web Developer.</h2>
+        <h2>Web Developer.</h2>
       </header>
     </section>
 
@@ -61,7 +61,7 @@
         </div>
 
         <div class="card">
-          <div class="card-logo-layer">
+          <div id="dev-tools-card" class="card-logo-layer">
             <i class="fas fa-tools"></i>
           </div>
           <h3 class="card-header">DEV TOOLS</h3>
@@ -85,35 +85,36 @@
             </div>
           </div>
         </div>
+
+        <div id="design-card" class="card">
+          <div class="card-logo-layer">
+              <i class="fas fa-pen-nib"></i>
+          </div>
+          <h3 class="card-header">DESIGN | MISC</h3>
+          <div class="card-content">
+            <div class="content-col-1">
+              <ul>
+                <li>Sketch</li>
+                <li>Figma</li>
+                <li>Photoshop</li>
+                <li>GIMP</li>
+                <li><br /></li>
+                </ul>
+              </ul>
+            </div>
+            <div class="content-col-2">
+              <ul>
+                <li>Bootstrap</li>
+                <li>Semantic UI</li>
+                <li>Material UI</li>
+                <li>Slack</li>
+                <li><br /></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div id="design-card" class="card">
-        <div class="card-logo-layer">
-            <i class="fas fa-pen-nib"></i>
-        </div>
-        <h3 class="card-header">DESIGN | MISC</h3>
-        <div class="card-content">
-          <div class="content-col-1">
-            <ul>
-              <li>Sketch</li>
-              <li>Figma</li>
-              <li>Photoshop</li>
-              <li>GIMP</li>
-              <li><br /></li>
-              </ul>
-            </ul>
-          </div>
-          <div class="content-col-2">
-            <ul>
-              <li>Bootstrap</li>
-              <li>Semantic UI</li>
-              <li>Material UI</li>
-              <li>Slack</li>
-              <li><br /></li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </section>
 
     <div id="work">
@@ -236,16 +237,26 @@
       </section>
     </div>
 
-    <div id="about">
+    <section class="about-container">
+    <div id="about" class="about-me">
       <h2>About Me</h2>
         <div class="about-content">
           <div class="me">
           <img src="assets/me.jpg"/>
           </div>
-          <div class="about-description">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto expedita veniam dolor. Cum fugit excepturi modi, facere accusantium voluptatem veritatis alias minus porro perspiciatis quisquam hic ipsum necessitatibus sint eveniet quibusdam dicta praesentium. A aliquid eum dicta, minima, asperiores nam necessitatibus quam quod repellat accusamus quasi ab fugiat, voluptatum laudantium aut architecto quas ipsa veniam. <br /><br /> Beatae ipsa consequatur modi recusandae vel officiis ad ipsam voluptas cupiditate, distinctio voluptate ullam id, repellat aspernatur debitis magnam illo facilis praesentium iusto sunt veritatis quia laudantium aut animi? Voluptates, quae, dicta ratione eaque eligendi ut, necessitatibus consectetur reprehenderit odit dolorem mollitia assumenda autem culpa?</p>
-          </div>
+            <p>I'm a web developer from the Greater Hartford, CT area. My primary focus is in building user
+               interfaces with front-end frameworks like React, but I also enjoy working with server-side
+               technologies like Node and C#. <br /><br />
+               I became interested in coding once I realized that it allows for me
+               to be both creative and logical at the same time. I love how accessible coding is for turning
+               ideas into a product that everyone can use and benefit from. When I am not developing, I am riding my BMX bike,
+               or spending time with my friends, family, or my two dogs Louie and Eli.
+            </p>
         </div>
       </div>
+      <div class="bmx-photo-container">
+       <img src="assets/seth-tooth.jpeg" />
+      </div>
+    </section>
   </body>
 </html>
