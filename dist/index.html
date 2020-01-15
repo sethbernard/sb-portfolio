@@ -22,7 +22,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -244,13 +244,12 @@
           <div class="me">
           <img src="assets/me.jpg"/>
           </div>
-            <p>I'm a web developer from the Greater Hartford, CT area. My primary focus is in building user
-               interfaces with front-end frameworks like React, but I also enjoy working with server-side
+            <p>I'm a web developer from the Greater Hartford, CT area. My primary focus is in building web applications
+               with front-end frameworks like React, but I also enjoy working with server-side
                technologies like Node and C#. <br /><br />
-               I became interested in coding once I realized that it allows for me
-               to be both creative and logical at the same time. I love how accessible coding is for turning
-               ideas into a product that everyone can use and benefit from. When I am not developing, I am riding my BMX bike,
-               or spending time with my friends, family, or my two dogs Louie and Eli.
+               I became interested in coding once I realized that it allows for me to be both creative and logical at the same time. 
+               I love how accessible coding is for turning ideas into a product that everyone can use and benefit from. 
+               When I am not developing, I am riding my BMX bike, or spending time with my friends, family, or my two dogs Louie and Eli.
             </p>
         </div>
       </div>
@@ -258,5 +257,30 @@
        <img src="assets/seth-tooth.jpeg" />
       </div>
     </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-information">
+      <h2>Contact</h2>
+      <h4>I am currently available for full-time employment or freelance work.</h4>
+
+      <form action="send" method="POST">
+          <p>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name">
+          </p>
+          <p>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Eg. example@email.com">
+          </p>
+          <p>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Please enter your message to me..."></textarea>
+          </p>
+        <button type="submit" class="button">Submit</button>
+      </form>
+
+    </div>
+    </section>
+
   </body>
 </html>
