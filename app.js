@@ -8,7 +8,7 @@ require('dotenv').config();
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}!`));
