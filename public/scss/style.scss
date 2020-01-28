@@ -377,20 +377,32 @@ nav {
 
       button {
         margin-top: 3rem;
+        margin-bottom: 1rem;
         width: 20%;
         align-self: center;
         font-size: 1rem;
         background-color: #5e945a;
         border-width: 0;
         color: #fff;
-        // box-shadow: $card-shadow;
+        box-shadow: $card-shadow;
       }
 
       button:hover {
         cursor: pointer;
       }
-      .errors {
-        color: red;
+      #success-message {
+        margin: 0;
+        color: #5cb85c;
+        text-align: center;
+        font-size: $p-font-size;
+      }
+      #error-messages {
+        color: #d9534f;
+        font-size: $p-font-size;
+
+        li {
+          padding-bottom: 0.5rem;
+        }
       }
     }
   }
