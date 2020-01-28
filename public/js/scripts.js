@@ -6,6 +6,8 @@ const errorMessages = document.getElementById('error-messages');
 //Handle Form on client-side
 function handleForm(e) {
   e.preventDefault();
+  successMessage.innerHTML = '';
+  errorMessages.innerHTML = '';
 
   let body = {
     name: document.getElementById('name').value,
@@ -20,8 +22,7 @@ function handleForm(e) {
       text: body.text
     })
     .then(response => {
-      const success = response.data.message;
-      successMessage.insertAdjacentHTML('beforebegin', success);
+      successMessage.innerHTML = response.data.message;
       contactForm.reset();
     })
     .catch(error => {
@@ -31,7 +32,7 @@ function handleForm(e) {
         })
         .join('');
 
-      errorMessages.insertAdjacentHTML('beforebegin', errors);
+      errorMessages.innerHTML = errors;
     });
 }
 
