@@ -26,13 +26,13 @@ app.post(
   [
     check('name')
       .notEmpty()
-      .withMessage('Your name is required'),
+      .withMessage('Your name is required.'),
     check('email')
       .isEmail()
-      .withMessage('Your email is required'),
+      .withMessage('Your email is required.'),
     check('text')
       .notEmpty()
-      .withMessage('Please write a message for me')
+      .withMessage('Please write a message for me.')
   ],
 
   (req, res) => {
@@ -48,7 +48,7 @@ app.post(
       return res.status(422).send({ errors: errors.array() });
     }
 
-    sgMail.send(sgMessage);
+    // sgMail.send(sgMessage);
 
     return res.status(201).send({
       message: 'Thank you for getting in touch. I will contact you soon!'
