@@ -4,16 +4,9 @@ const path = require('path');
 const PORT = process.env.port || 5000;
 const bodyParser = require('body-parser');
 require('dotenv').config();
-const hbs = require('express-hbs');
 const { check, validationResult } = require('express-validator');
-
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
-//Set view engine
-app.engine('hbs', hbs.express4());
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
 
 //Serve static assets
 app.use(express.static('public'));
@@ -37,31 +30,28 @@ app.post(
     check('email')
       .isEmail()
       .withMessage('Your email is required'),
-    check('message')
+    check('text')
       .notEmpty()
       .withMessage('Please write a message for me')
   ],
 
   (req, res) => {
-    const message = {
+    const sgMessage = {
       to: process.env.MY_EMAIL,
       from: req.body.email,
       subject: `Portfolio Contact: ${req.body.name}`,
-      text: req.body.message,
-      html: `<strong>${req.body.message}</strong>`
+      text: req.body.text,
+      html: `<strong>${req.body.text}</strong>`
     };
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      res.status(422);
-      res.render('index', { errors: errors.array() });
-      console.log(errors);
-    } else {
-      // sgMail.send(message);
-
-      console.log(req.body);
-      res.status(204).render('index', {
-        message: 'Thank you for getting in touch. I will contact you soon!'
-      });
+      return res.status(422).send({ errors: errors.array() });
     }
+
+    sgMail.send(sgMessage);
+
+    return res.status(201).send({
+      message: 'Thank you for getting in touch. I will contact you soon!'
+    });
   }
 );

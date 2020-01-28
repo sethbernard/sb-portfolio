@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.min.css" />
+  <title>Seth's Portfolio</title>
+  <script src="https://kit.fontawesome.com/24609b81ab.js" crossorigin="anonymous"></script>
+</head>
+
+  <body>
+    <nav>
+      <h1 class="logo"><a href="#">sethbernard</a></h1>
+      <ul>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <header>
+        <h1>Hi, I'm Seth.</h1>
+        <h2>Web Developer.</h2>
+      </header>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="card-group">
+        <div id="code-card" class="card">
+          <div class="card-logo-layer">
+            <i class="fas fa-file-code"></i>
+          </div>
+          <h3 class="card-header">CODE</h3>
+          <div class="card-content">
+            <div class="content-col-1">
+              <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Sass</li>
+                <li>Javascript</li>
+              </ul>
+            </div>
+            <div class="content-col-2">
+              <ul>
+                <li>Node</li>
+                <li>C#</li>
+                <li>Bash</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div id="dev-tools-card" class="card-logo-layer">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3 class="card-header">DEV TOOLS</h3>
+          <div class="card-content">
+            <div class="content-col-1">
+              <ul>
+                <li>React</li>
+                <li>Express</li>
+                <li>Jquery</li>
+                <li>Firebase</li>
+                <li>Git</li>
+              </ul>
+            </div>
+            <div class="content-col-2">
+              <ul>
+                <li>Npm</li>
+                <li>Wordpress</li>
+                <li>ASP.NET MVC</li>
+                <li>Visual Studio</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="design-card" class="card">
+          <div class="card-logo-layer">
+            <i class="fas fa-pen-nib"></i>
+          </div>
+          <h3 class="card-header">DESIGN | MISC</h3>
+          <div class="card-content">
+            <div class="content-col-1">
+              <ul>
+                <li>Sketch</li>
+                <li>Figma</li>
+                <li>Photoshop</li>
+                <li>GIMP</li>
+                <li><br /></li>
+              </ul>
+              </ul>
+            </div>
+            <div class="content-col-2">
+              <ul>
+                <li>Bootstrap</li>
+                <li>Semantic UI</li>
+                <li>Material UI</li>
+                <li>Slack</li>
+                <li><br /></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <div id="work">
+      <h2>My Work</h2>
+      <section id="palate" class="work-section">
+        <div class="work-description">
+          <h3>Palate Recipe App</h3>
+          <p>This app allows a user to search for and discover recipes. The 'Saved Recipes' route is protected until
+            the user signs up and becomes authenticated. Once the user is authenticated and logged in, they can save and
+            delete
+            their unique recipes. The recipe data is being pulled from the Edamam API and user data is being stored
+            in Firebase. I also used React, React Router, Semantic UI, and CSS to build the user interface and to populate
+            the page with recipes.
+          </p>
+          <div class="work-icons">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-react"></i>
+          </div>
+          <div class="external-links">
+            <a class="button" href="https://palate.netlify.com/" target="_blank" rel="noopener noreferrer">Launch</a>
+            <a class="button" href="https://github.com/sethbernard/react-recipe-web-app" target="_blank">Github</a>
+          </div>
+        </div>
+        <div class="work-mockup">
+          <img class="devices" src="../images/palate-iphone-macbook.png" />
+        </div>
+      </section>
+
+      <section id="project-refuge" class="work-section">
+        <div class="work-description">
+          <h3>Project Refuge Website</h3>
+          <p>This is a website I volunteered to work on through <a class="bold-link" href="http://www.biltran.com/"
+              target="_blank" rel="noopener noreferrer">Biltran</a>.
+            Project Refuge is a nonprofit organization based in Brooklyn, who help developing communities in Uganda rise
+            above poverty. My role
+            was to build the majority of the website with a Wordpress page builder, custom CSS, and HTML. Client
+            communication was handled through
+            Google Drive for content and images.
+          </p>
+          <div class="work-icons">
+            <i class="fab fa-wordpress"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-google-drive"></i>
+          </div>
+          <div class="external-links">
+            <a class="button" href="https://projectrefugeinc.org" target="_blank" rel="noopener noreferrer">Launch</a>
+          </div>
+        </div>
+        <div class="work-mockup">
+          <img class="devices" src="../images/project-refuge-imac-macbook.png" />
+        </div>
+      </section>
+
+      <section id="fat-trax" class="work-section">
+        <div class="work-description">
+          <h3>Fat-Trax Website</h3>
+          <p>Fat-Trax is a BMX, snowboard, and skateboard shop located in East Longmeadow, Massachusetts. Using Wordpress,
+            Docker,
+            and Gitlab, I built their new website in a local environment. Then, I pushed the site to production with a
+            Digital Ocean droplet.
+            I also used GIMP to make the backgrounds of the logos transparent. The Gitlab repository is private.
+          </p>
+          <div class="work-icons">
+            <i class="fab fa-wordpress"></i>
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-docker"></i>
+          </div>
+          <div class="external-links">
+            <a class="button" href="https://fat-trax.com" target="_blank" rel="noopener noreferrer">Launch</a>
+          </div>
+        </div>
+        <div class="work-mockup">
+          <img class="devices" src="../images/fattrax-iphone-macbook.png" />
+        </div>
+      </section>
+
+      <section id="giphy-search" class="work-section">
+        <div class="work-description">
+          <h3>Giphy Search Engine</h3>
+          <p>This web app allows you to search for a specific GIF and pick how many GIFs you want to be displayed on the
+            page.
+            There is also a route for popular GIFs and for a random GIF. This was a fun, personal project I built to
+            become more familiar with
+            getting data from an external API. I built this app with React, React Router, Material-UI, CSS, HTML, and the
+            Giphy API.
+            It is hosted on Netlify.
+          </p>
+          <div class="work-icons">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-react"></i>
+          </div>
+          <div class="external-links">
+            <a class="button" href="https://gif-search-engine.netlify.com" target="_blank"
+              rel="noopener noreferrer">Launch</a>
+            <a class="button" href="https://github.com/sethbernard/gif-search-engine" target="_blank">Github</a>
+          </div>
+        </div>
+        <div class="work-mockup">
+          <img class="devices" src="../images/giphy-search-imac-macbook.png" />
+        </div>
+      </section>
+
+      <section id="digital" class="work-section">
+        <div class="work-description">
+          <h3>W3 Layouts Template Clone</h3>
+          <p>As a personal experiment, I decided to see if I could replicate a template without looking at the source
+            code.
+            I found a design I liked on <a class="bold-link" href="https://w3layouts.com/" target="_blank"
+              rel="noopener noreferrer">w3layouts</a>
+            and built it using React, React Router, React Bootstrap, and CSS. The content on the site is just lorem ipsum
+            dummy text. Here is a
+            <a class="bold-link"
+              href="https://demo.w3layouts.com/demos_new/template_demo/27-03-2019/digital-demo_Free/255144703/web/index.html"
+              target="_blank" rel="noopener noreferrer">link</a> for reference if you want to compare the template with
+            the clone I built.
+          </p>
+          <div class="work-icons">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-bootstrap"></i>
+            <i class="fab fa-react"></i>
+          </div>
+          <div class="external-links">
+            <a class="button" href="https://digital-w3l-template.netlify.com/" target="_blank"
+              rel="noopener noreferrer">Launch</a>
+            <a class="button" href="https://github.com/sethbernard/digital-w3l-site-clone" target="_blank">Github</a>
+          </div>
+        </div>
+        <div class="work-mockup">
+          <img class="devices" src="../images/digital-iphone-macbook.png" />
+        </div>
+      </section>
+    </div>
+
+    <section class="about-container">
+      <div id="about" class="about-me">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <div class="me">
+            <img src="../images/me.jpg" />
+          </div>
+          <p>I'm a web developer from the Greater Hartford, CT area. My primary focus is in building web applications
+            with front-end frameworks like React, but I also enjoy working with server-side
+            technologies like Node and C#. <br /><br />
+            I became interested in coding once I realized that it allows for me to be both creative and logical at the
+            same time.
+            I love how accessible coding is for turning ideas into a product that everyone can use and benefit from.
+            When I am not developing, I am riding my BMX bike, or spending time with my friends, family, or my two dogs
+            Louie and Eli.
+          </p>
+        </div>
+      </div>
+      <div class="bmx-photo-container">
+        <img src="../images/seth-tooth.jpeg" />
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-information">
+        <h2>Contact</h2>
+        <h4>I am currently available for full-time employment or freelance work.</h4>
+
+        <form id="contact-form" action="/" method="POST">
+          <p>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your first and last name">
+          </p>
+          <p>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Eg. example@email.com">
+          </p>
+          <p>
+            <label for="text">Message</label>
+            <textarea id="text" name="text" placeholder="Please enter your message to me..."></textarea>
+          </p>
+          <button type="submit" class="button">Submit</button>
+          <p id="success-message"></p>
+          <ul id="error-messages">
+          </ul>
+        </form>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
