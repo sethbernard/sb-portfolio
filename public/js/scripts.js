@@ -6,7 +6,7 @@ const errorMessages = document.getElementById('error-messages');
 //Handle Form on client-side
 function handleForm(e) {
   e.preventDefault();
-  successMessage.innerHTML = '';
+  successMessage.textContent = '';
   errorMessages.innerHTML = '';
 
   let body = {
@@ -21,13 +21,13 @@ function handleForm(e) {
       email: body.email,
       text: body.text
     })
-    .then(response => {
-      successMessage.innerHTML = response.data.message;
+    .then((response) => {
+      successMessage.textContent = response.data.message;
       contactForm.reset();
     })
-    .catch(error => {
+    .catch((error) => {
       const errors = error.response.data.errors
-        .map(error => {
+        .map((error) => {
           return `<li>${error.msg}</li>`;
         })
         .join('');

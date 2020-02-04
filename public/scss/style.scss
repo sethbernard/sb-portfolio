@@ -15,6 +15,7 @@ $p-font-size: 1.125rem;
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 html,
@@ -25,7 +26,6 @@ body {
 
 body {
   font-family: 'Roboto', sans-serif;
-  overflow-x: hidden;
   position: absolute;
 }
 
@@ -320,6 +320,7 @@ nav {
   width: 100%;
   min-height: 50vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
@@ -334,79 +335,78 @@ nav {
       padding: 2rem 0;
       text-align: center;
     }
+  }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-width: 70%;
-      box-shadow: $card-shadow;
-      padding: 3rem;
-      border-radius: 10px;
-      background-color: #fff;
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    box-shadow: $card-shadow;
+    padding: 3rem;
+    border-radius: 10px;
+    background-color: #fff;
 
-      p:nth-child(2),
-      p:nth-child(3) {
-        margin-top: 2rem;
+    p:nth-child(2),
+    p:nth-child(3) {
+      margin-top: 2rem;
+    }
+
+    p {
+      label {
+        display: inline-block;
+        width: 4rem;
+        text-align: left;
+        margin-bottom: 0.5rem;
       }
 
-      p {
-        label {
-          display: inline-block;
-          width: 4rem;
-          text-align: left;
-          margin-bottom: 0.5rem;
-        }
-
-        input,
-        textarea {
-          display: block;
-          width: 100%;
-          padding: 0.8rem;
-          font-size: 1rem;
-          border-width: 0;
-          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-          border-radius: 4px;
-        }
-
-        textarea {
-          min-height: 10rem;
-          resize: none;
-        }
-      }
-
-      button {
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-        width: 20%;
-        align-self: center;
+      input,
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 0.8rem;
         font-size: 1rem;
-        background-color: #5e945a;
         border-width: 0;
-        color: #fff;
-        box-shadow: $card-shadow;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
       }
 
-      button:hover {
-        cursor: pointer;
+      textarea {
+        min-height: 10rem;
+        resize: none;
       }
-      #success-message {
-        margin: 0;
-        color: #5cb85c;
-        text-align: center;
-        font-size: $p-font-size;
-      }
-      #error-messages {
-        color: #d9534f;
-        font-size: $p-font-size;
+    }
 
-        li {
-          padding-bottom: 0.5rem;
-        }
+    button {
+      margin: 3rem auto 1rem;
+      width: 25%;
+      font-size: 1rem;
+      background-color: #5e945a;
+      border-width: 0;
+      color: #fff;
+      box-shadow: $card-shadow;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+    #success-message {
+      margin: 0;
+      color: #5cb85c;
+      text-align: center;
+      font-size: $p-font-size;
+    }
+    #error-messages {
+      color: #d9534f;
+      font-size: $p-font-size;
+
+      li {
+        padding-bottom: 0.5rem;
       }
     }
   }
 }
+
 ::placeholder {
   color: darkgray;
 }
@@ -440,10 +440,36 @@ nav {
   }
 
   .bmx-photo-container {
-    width: 100%;
+    width: 100vw;
   }
   .about-content {
     padding: 0 4.5rem;
+  }
+  #contact {
+    width: 100%;
+
+    .contact-information {
+      width: 100%;
+
+      h4 {
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+    form {
+      width: 90%;
+      margin: 0 auto;
+      padding: 2rem;
+
+      button {
+        margin: 2rem auto 0rem;
+      }
+
+      #success-message,
+      #error-messages {
+        padding-top: 1rem;
+      }
+    }
   }
 }
 
@@ -468,5 +494,8 @@ nav {
   }
   .external-links {
     padding-bottom: 2rem;
+  }
+  #contact-form > button {
+    width: 50%;
   }
 }
