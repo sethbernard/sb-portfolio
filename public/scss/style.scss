@@ -1,8 +1,10 @@
 @import './_mixins';
 
 $off-white: #f6f2f2;
+$very-small-heading: 2rem;
 $small-heading: 3rem;
 $medium-heading: 6rem;
+$large-heading: 8rem;
 $card-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
 $icon-size: 4rem;
 $p-font-size: 1.125rem;
@@ -37,9 +39,9 @@ nav {
   padding: 1rem 2rem;
   background-color: $off-white;
 
-  h1.logo {
+  h5.logo {
     margin-right: 2rem;
-    font-size: 2rem;
+    font-size: $very-small-heading;
     font-weight: 700;
   }
 
@@ -62,7 +64,8 @@ nav {
 // Hero Section
 .hero {
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   position: relative;
   z-index: 1;
   background: url('../images/hartford.jpg') 50% 50% / cover no-repeat;
@@ -76,7 +79,7 @@ nav {
 
     h1 {
       color: $off-white;
-      font-size: 8rem;
+      font-size: $large-heading;
     }
 
     h2 {
@@ -147,6 +150,7 @@ nav {
   margin: 1.5rem 0;
   font-weight: 700;
   letter-spacing: 0.125rem;
+  font-size: $p-font-size;
 }
 
 .card-content {
@@ -269,7 +273,7 @@ nav {
 
 .about-me {
   // background-color: #eee;
-  width: 35%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -281,7 +285,7 @@ nav {
 }
 
 .about-content {
-  width: 80%;
+  width: 90%;
   padding-bottom: 1.5rem;
   margin: 0 auto;
 
@@ -307,7 +311,7 @@ nav {
 }
 
 .bmx-photo-container {
-  width: 65%;
+  width: 60%;
 
   img {
     height: 100%;
@@ -316,6 +320,7 @@ nav {
   }
 }
 
+//Contact me section
 .contact {
   width: 100%;
   min-height: 50vh;
@@ -385,11 +390,12 @@ nav {
       border-width: 0;
       color: #fff;
       box-shadow: $card-shadow;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
-    button:hover {
-      cursor: pointer;
-    }
     #success-message {
       margin: 0;
       color: #5cb85c;
@@ -445,6 +451,7 @@ nav {
   .about-content {
     padding: 0 4.5rem;
   }
+
   #contact {
     width: 100%;
 
@@ -474,8 +481,28 @@ nav {
 }
 
 @media (max-width: 768px) {
+  .hero header {
+    h1 {
+      font-size: 4rem;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+
+  #skills,
+  #work,
+  #about,
+  #contact {
+    h2 {
+      font-size: 4rem;
+    }
+  }
+
   .card {
-    width: 80vw;
+    width: 70vw;
     min-height: 80vw;
     margin-bottom: 2rem;
   }
@@ -492,9 +519,23 @@ nav {
     height: auto;
     padding: 2rem 0;
   }
+
+  .work-description {
+    h3 {
+      font-size: $very-small-heading;
+    }
+    p {
+      padding: 1rem;
+    }
+  }
+
   .external-links {
     padding-bottom: 2rem;
   }
+  .about-content {
+    padding: 0 1rem;
+  }
+
   #contact-form > button {
     width: 50%;
   }
