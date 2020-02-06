@@ -192,6 +192,12 @@ nav {
   display: flex;
 }
 
+.bold-link {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+}
+
 .work-description {
   width: 35%;
   height: 100%;
@@ -209,13 +215,8 @@ nav {
     padding: 1rem 3rem 2rem;
     line-height: 1.7;
     font-size: $p-font-size;
-
-    .bold-link {
-      text-decoration: none;
-      color: #000;
-      font-weight: 700;
-    }
   }
+
   .work-icons {
     display: flex;
     flex-wrap: wrap;
@@ -336,9 +337,14 @@ nav {
     display: block;
     padding-bottom: 2rem;
 
-    h4 {
+    h5 {
       padding: 2rem 0;
       text-align: center;
+      font-size: $very-small-heading;
+    }
+    p {
+      line-height: 1.5;
+      font-size: $p-font-size;
     }
   }
 
@@ -456,10 +462,9 @@ nav {
     width: 100%;
 
     .contact-information {
-      width: 100%;
+      width: 75%;
 
       h4 {
-        width: 90%;
         margin: 0 auto;
       }
     }
@@ -534,6 +539,14 @@ nav {
   }
   .about-content {
     padding: 0 1rem;
+  }
+
+  #contact {
+    .contact-information {
+      width: 100%;
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
   }
 
   #contact-form > button {
