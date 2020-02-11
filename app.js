@@ -9,16 +9,11 @@ const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 //Serve static assets
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}!`));
-
-// Render homepage
-app.get('/', (req, res) => {
-  res.render('index');
-});
 
 // Sends contact form information to my email
 app.post(
