@@ -1,3 +1,6 @@
+import '../scss/style.scss';
+import axios from 'axios';
+
 // Cache Dom
 const contactForm = document.getElementById('contact-form');
 const successMessage = document.getElementById('success-message');
