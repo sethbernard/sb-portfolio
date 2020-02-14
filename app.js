@@ -9,7 +9,7 @@ const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 //Serve static assets
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'dist')));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -43,7 +43,7 @@ app.post(
       return res.status(422).send({ errors: errors.array() });
     }
 
-    // sgMail.send(sgMessage);
+    sgMail.send(sgMessage);
 
     return res.status(201).send({
       message: 'Thank you for getting in touch. I will contact you soon!'
