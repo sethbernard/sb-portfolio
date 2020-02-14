@@ -23,12 +23,12 @@ html,
 body {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   position: absolute;
+  overflow-x: hidden;
 }
 
 // Navbar section
@@ -71,8 +71,8 @@ nav {
   background: url('../images/hartford.jpg') 50% 50% / cover no-repeat;
   background-attachment: fixed;
   height: calc(100% - 4.3rem);
-  @include dark-overlay;
   padding: 2rem;
+  @include dark-overlay;
 
   header {
     z-index: 2;
@@ -87,10 +87,6 @@ nav {
       font-size: $medium-heading;
     }
   }
-}
-
-.hero::after {
-  background: rgba(0, 0, 0, 0.5);
 }
 
 // Skills Section
@@ -329,7 +325,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   // background-color: lightblue;
 
   .contact-information {
@@ -337,10 +333,10 @@ nav {
     display: block;
     padding-bottom: 2rem;
 
-    h5 {
+    h6 {
       padding: 2rem 0;
       text-align: center;
-      font-size: $very-small-heading;
+      font-size: 1.5rem;
     }
     p {
       line-height: 1.5;
@@ -421,6 +417,16 @@ nav {
 
 ::placeholder {
   color: darkgray;
+}
+
+footer {
+  max-height: 25vh;
+  background-color: $off-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
 //Media queries
