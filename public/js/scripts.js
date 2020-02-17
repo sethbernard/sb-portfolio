@@ -40,3 +40,7 @@ function handleForm(e) {
 }
 
 contactForm.addEventListener('submit', handleForm);
+
+// Get current year for footer
+let date = new Date().getFullYear();
+document.getElementById('current-year').innerHTML = date;
