@@ -1,6 +1,10 @@
 @import './_mixins';
 
 $off-white: #f6f2f2;
+$main-theme-color: #4281a4;
+$second-theme-color: #ead2ac;
+$accent-color: #aebdc4;
+$bright-accent-color: #fe938c;
 $very-small-heading: 2rem;
 $small-heading: 3rem;
 $medium-heading: 6rem;
@@ -39,7 +43,7 @@ nav {
   padding: 1rem 2rem;
   background-color: $off-white;
 
-  h5.logo {
+  h5 {
     margin-right: 2rem;
     font-size: $very-small-heading;
     font-weight: 700;
@@ -80,6 +84,9 @@ nav {
     h1 {
       color: $off-white;
       font-size: $large-heading;
+      span {
+        color: $second-theme-color;
+      }
     }
 
     h2 {
@@ -89,21 +96,29 @@ nav {
   }
 }
 
+// Skills, Work, About, Contact headings
+.heading-wrapper {
+  width: 100%;
+  text-align: center;
+  h2 {
+    font-size: $medium-heading;
+    display: inline-block;
+    margin: 3rem 2rem;
+    color: $main-theme-color;
+    padding: 1rem;
+    box-shadow: $card-shadow;
+    border-radius: 10px;
+    background-color: white;
+  }
+}
+
 // Skills Section
 #skills {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 75vh;
-  background-color: $off-white;
-
-  h2 {
-    font-size: $medium-heading;
-    text-align: center;
-    margin: 1.5rem 0;
-    width: 100%;
-  }
+  background-color: $main-theme-color;
 }
 
 .card-group {
@@ -138,6 +153,8 @@ nav {
     border-radius: 50%;
     box-shadow: $card-shadow;
     padding: 2rem;
+    color: $main-theme-color;
+    background-color: $off-white;
   }
 }
 
@@ -168,18 +185,8 @@ nav {
 }
 
 // My Work Section
-#work,
-#about,
-#contact {
-  h2 {
-    font-size: $medium-heading;
-    padding-top: 2rem;
-    text-align: center;
-  }
-}
-
 #palate {
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 14rem);
 }
 
 .work-section {
@@ -235,10 +242,16 @@ nav {
 .button {
   margin-right: 2rem;
   padding: 1rem;
-  border: 2px solid black;
   text-decoration: none;
   border-radius: 10px;
-  color: #000;
+  background-color: $off-white;
+  border: none;
+  color: $main-theme-color;
+  font-weight: 700;
+  &:hover {
+    transition: 0.3s;
+    background-color: $bright-accent-color;
+  }
 }
 
 .work-mockup {
@@ -257,28 +270,37 @@ nav {
 #project-refuge,
 #giphy-search {
   flex-direction: row-reverse;
-  background-color: #eee;
+  background-color: $main-theme-color;
+
+  .work-description {
+    color: $off-white;
+    .bold-link {
+      color: $off-white;
+      &:hover {
+        color: $bright-accent-color;
+      }
+    }
+    i {
+      color: $second-theme-color;
+    }
+  }
 }
 
 // About Me section
-.about-container {
+.about {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   min-height: 50vh;
+  background-color: $off-white;
 }
 
 .about-me {
-  // background-color: #eee;
   width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  h2 {
-    padding: 0;
-  }
 }
 
 .about-content {
@@ -317,6 +339,11 @@ nav {
   }
 }
 
+.bold-link:hover {
+  transition: 0.3s;
+  color: $bright-accent-color;
+}
+
 //Contact me section
 .contact {
   width: 100%;
@@ -325,8 +352,8 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4rem;
-  // background-color: lightblue;
+  padding-bottom: 4rem;
+  background-color: $second-theme-color;
 
   .contact-information {
     width: 50%;
@@ -341,6 +368,7 @@ nav {
     p {
       line-height: 1.5;
       font-size: $p-font-size;
+      text-align: left;
     }
   }
 
@@ -360,10 +388,10 @@ nav {
     }
 
     p {
+      text-align: left;
       label {
         display: inline-block;
         width: 4rem;
-        text-align: left;
         margin-bottom: 0.5rem;
       }
 
@@ -376,6 +404,11 @@ nav {
         border-width: 0;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
         border-radius: 4px;
+        &:focus {
+          outline: none;
+          border: 1px solid $main-theme-color;
+          box-shadow: 0 0px 6px $main-theme-color;
+        }
       }
 
       textarea {
@@ -388,7 +421,7 @@ nav {
       margin: 3rem auto 1rem;
       width: 25%;
       font-size: 1rem;
-      background-color: #5e945a;
+      background-color: $main-theme-color;
       border-width: 0;
       color: #fff;
       box-shadow: $card-shadow;

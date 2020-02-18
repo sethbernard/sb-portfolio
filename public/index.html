@@ -13,7 +13,7 @@
 
   <body>
     <nav>
-      <h5 class="logo"><a href="#">sethbernard</a></h5>
+      <h5><a href="#">sethbernard</a></h5>
       <ul>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#work">Work</a></li>
@@ -24,13 +24,15 @@
 
     <section class="hero">
       <header>
-        <h1>Hi, I'm Seth.</h1>
+        <h1>Hi, I'm <span>Seth.</span></h1>
         <h2>Web Developer</h2>
       </header>
     </section>
 
     <section id="skills">
+      <div class="heading-wrapper">
       <h2>Skills</h2>
+      </div>
       <div class="card-group">
         <div id="code-card" class="card">
           <div class="card-logo-layer">
@@ -113,8 +115,10 @@
 
     </section>
 
-    <div id="work">
+    <div id="work" class="work">
+      <div class="heading-wrapper">
       <h2>My Work</h2>
+      </div>
       <section id="palate" class="work-section">
         <div class="work-description">
           <h3>Palate Recipe App</h3>
@@ -249,9 +253,11 @@
       </section>
     </div>
 
-    <section class="about-container">
-      <div id="about" class="about-me">
+    <section id="about" class="about">
+      <div class="about-me">
+        <div class="heading-wrapper">
         <h2>About Me</h2>
+      </div>
         <div class="about-content">
           <div class="me">
             <img src="images/me.jpg" />
@@ -273,7 +279,9 @@
 
     <section id="contact" class="contact">
       <div class="contact-information">
+        <div class="heading-wrapper">
         <h2>Contact</h2>
+      </div>
         <h6>I am currently available for freelance work or job offers.</h6>
         <p>If you are interested in hiring me for a project or have any questions, please fill out the form below. If you would like to contact me directly, you can send an email to
            <a class="bold-link" href="mailto:sethbernard7@gmail.com">sethbernard7@gmail.com</a>. I will get back to you as soon as possible.</p>
