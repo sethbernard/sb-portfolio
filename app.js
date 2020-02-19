@@ -50,3 +50,6 @@ app.post(
     });
   }
 );
+
+//Kill server with ctrl + c
+process.on('SIGINT', () => process.exit(1));
