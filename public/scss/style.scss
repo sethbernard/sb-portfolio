@@ -2,7 +2,7 @@
 
 $off-white: #f6f2f2;
 $main-theme-color: #4281a4;
-$second-theme-color: #ead2ac;
+$second-theme-color: #eddabb;
 $accent-color: #aebdc4;
 $bright-accent-color: #fe938c;
 $very-small-heading: 2rem;
@@ -21,6 +21,7 @@ $p-font-size: 1.125rem;
 
 html {
   scroll-behavior: smooth;
+  color: #333;
 }
 
 html,
@@ -62,12 +63,17 @@ nav {
   a {
     text-decoration: none;
     color: #111;
+    &:hover {
+      color: $main-theme-color;
+      font-weight: 700;
+    }
   }
 }
 
 // Hero Section
 .hero {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -83,16 +89,38 @@ nav {
 
     h1 {
       color: $off-white;
+      opacity: 0.9;
       font-size: $large-heading;
-      span {
-        color: $second-theme-color;
-      }
     }
 
     h2 {
       color: $off-white;
+      opacity: 0.9;
       font-size: $medium-heading;
+      margin-bottom: 3rem;
     }
+  }
+}
+
+.hero-button {
+  padding: 1.5rem;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: $off-white;
+  border: none;
+  color: $main-theme-color;
+  font-size: 1.5rem;
+  font-weight: 700;
+  opacity: 0.9;
+  z-index: 2;
+  &:hover {
+    transition: 0.3s;
+    opacity: 1;
+    // color: $off-white;
+    background-color: $bright-accent-color;
+  }
+  i {
+    margin-left: 0.25rem;
   }
 }
 
@@ -104,7 +132,7 @@ nav {
     font-size: $medium-heading;
     display: inline-block;
     margin: 3rem 2rem;
-    color: $main-theme-color;
+    color: #333;
     padding: 1rem;
     box-shadow: $card-shadow;
     border-radius: 10px;
@@ -185,19 +213,21 @@ nav {
 }
 
 // My Work Section
-#palate {
-  height: calc(100vh - 14rem);
-}
+// #palate {
+//   height: calc(100vh - 14rem);
+// }
 
 .work-section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
+  align-items: center;
+  padding-bottom: 3rem;
 }
 
 .bold-link {
   text-decoration: none;
-  color: #000;
+  color: $main-theme-color;
   font-weight: 700;
 }
 
@@ -274,12 +304,11 @@ nav {
 
   .work-description {
     color: $off-white;
+
     .bold-link {
       color: $off-white;
-      &:hover {
-        color: $bright-accent-color;
-      }
     }
+
     i {
       color: $second-theme-color;
     }
@@ -476,6 +505,10 @@ footer {
 
   .work-section {
     flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  .external-links {
+    margin-bottom: 2rem;
   }
 
   .work-description,
@@ -536,6 +569,11 @@ footer {
     }
   }
 
+  .hero-button {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
   #skills,
   #work,
   #about,
@@ -573,9 +611,9 @@ footer {
     }
   }
 
-  .external-links {
-    padding-bottom: 2rem;
-  }
+  // .external-links {
+  //   padding-bottom: 2rem;
+  // }
   .about-content {
     padding: 0 1rem;
   }
