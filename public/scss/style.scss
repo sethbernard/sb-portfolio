@@ -355,6 +355,13 @@ nav {
   }
 }
 
+.about-card {
+  padding: 1rem;
+  box-shadow: $card-shadow;
+  border-radius: 10px;
+  background-color: white;
+}
+
 .me {
   height: 16rem;
   width: 16rem;
@@ -555,6 +562,10 @@ footer {
 
   .card {
     width: 40vw;
+  }
+
+  .about-card {
+    padding: 1.5rem;
   }
 
   #contact {
