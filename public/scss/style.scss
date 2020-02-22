@@ -5,7 +5,7 @@ $main-theme-color: #4281a4;
 $second-theme-color: #eddabb;
 $accent-color: #aebdc4;
 $bright-accent-color: #fe938c;
-$very-small-heading: 2rem;
+$extra-small-heading: 2rem;
 $small-heading: 3rem;
 $medium-heading: 6rem;
 $large-heading: 8rem;
@@ -20,7 +20,7 @@ $p-font-size: 1.125rem;
 }
 
 html {
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
   color: #333;
 }
 
@@ -44,12 +44,6 @@ nav {
   padding: 1rem 2rem;
   background-color: $off-white;
 
-  h5 {
-    margin-right: 2rem;
-    font-size: $very-small-heading;
-    font-weight: 700;
-  }
-
   ul {
     display: flex;
     justify-content: flex-end;
@@ -57,7 +51,9 @@ nav {
 
     li {
       margin-left: 3rem;
+      padding-bottom: 0.3rem;
       font-size: 0.875rem;
+      letter-spacing: 1.3px;
     }
   }
   a {
@@ -65,9 +61,26 @@ nav {
     color: #111;
     &:hover {
       color: $main-theme-color;
+      border-bottom: 3px solid $main-theme-color;
+      padding-bottom: 0.3rem;
       font-weight: 700;
     }
   }
+  h5 {
+    margin-right: 2rem;
+    font-size: $extra-small-heading;
+    font-weight: 700;
+
+    a:hover {
+      border: none;
+    }
+  }
+}
+
+.mobile-menu-button {
+  cursor: pointer;
+  z-index: 2;
+  display: none;
 }
 
 // Hero Section
@@ -213,16 +226,15 @@ nav {
 }
 
 // My Work Section
-// #palate {
-//   height: calc(100vh - 14rem);
-// }
-
 .work-section {
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   padding-bottom: 3rem;
+}
+#palate {
+  height: calc(100vh - 14rem);
 }
 
 .bold-link {
@@ -492,20 +504,16 @@ footer {
 }
 
 //Media queries
-@media (max-width: 991.98px) {
-  #skills {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .card {
-    width: 40vw;
+@media (max-width: 1199.98px) {
+  #palate {
+    height: auto;
+    padding-top: 0;
   }
 
   .work-section {
     flex-wrap: wrap;
-    margin-top: 2rem;
+    padding-top: 3rem;
+    height: auto;
   }
   .external-links {
     margin-bottom: 2rem;
@@ -517,6 +525,10 @@ footer {
     width: 100%;
     height: auto;
   }
+  .work-description p {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 
   .about-me {
     width: 100%;
@@ -527,7 +539,22 @@ footer {
     width: 100vw;
   }
   .about-content {
-    padding: 0 4.5rem;
+    padding: 0 6rem;
+  }
+  .contact form {
+    width: 70%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card {
+    width: 40vw;
   }
 
   #contact {
@@ -558,6 +585,51 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .main-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 4.3rem;
+    left: -100vw;
+    width: 100vw;
+    height: calc(100vh - 4.3rem);
+    transition: 0.5s ease-in-out;
+    background: $second-theme-color;
+    z-index: 4;
+
+    li {
+      margin-left: 0;
+      padding: 1rem;
+      // border-bottom: #ccc solid 1px;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    a {
+      color: $main-theme-color;
+    }
+    a:hover {
+      border: none;
+      opacity: 0.8;
+    }
+  }
+
+  .mobile-menu {
+    left: 0;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 0.25rem;
+    font-size: 1.5rem;
+    &:hover {
+      color: $main-theme-color;
+      transition: 0.2s;
+    }
+  }
+
   .hero header {
     h1 {
       font-size: 4rem;
@@ -593,10 +665,6 @@ footer {
     justify-content: center;
   }
 
-  #palate {
-    height: auto;
-  }
-
   .work-section {
     height: auto;
     padding: 2rem 0;
@@ -604,18 +672,27 @@ footer {
 
   .work-description {
     h3 {
-      font-size: $very-small-heading;
+      font-size: $extra-small-heading;
     }
     p {
-      padding: 1rem;
+      padding: 2rem 1rem;
     }
   }
 
-  // .external-links {
-  //   padding-bottom: 2rem;
+  .work-icons i {
+    margin-bottom: 2rem;
+  }
+
+  // .work-icons i:nth-child(4) {
+  //   margin-bottom: 0;
   // }
+
+  .work-description > div.external-links {
+    padding-top: 0;
+  }
+
   .about-content {
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
 
   #contact {
@@ -623,6 +700,9 @@ footer {
       width: 100%;
       padding-right: 1rem;
       padding-left: 1rem;
+    }
+    h6 {
+      padding-top: 0;
     }
   }
 
