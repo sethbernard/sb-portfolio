@@ -517,6 +517,15 @@ footer {
   padding: 2rem;
 }
 
+.site-languages {
+  padding-top: 1rem;
+  text-align: center;
+  color: darkgray;
+  p {
+    line-height: 1.7;
+  }
+}
+
 //Media queries
 @media (max-width: 1199.98px) {
   #palate {
