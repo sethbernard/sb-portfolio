@@ -20,7 +20,7 @@ $p-font-size: 1.125rem;
 }
 
 html {
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
   color: #333;
 }
 
@@ -43,6 +43,13 @@ nav {
   align-items: center;
   padding: 1rem 2rem;
   background-color: $off-white;
+  // opacity: 0.95;
+  height: 69px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100vw;
+  transition: top 0.4s ease-in-out;
 
   ul {
     display: flex;
@@ -77,6 +84,10 @@ nav {
   }
 }
 
+nav.hide {
+  top: -69px;
+}
+
 .mobile-menu-button {
   cursor: pointer;
   z-index: 2;
@@ -93,9 +104,12 @@ nav {
   z-index: 1;
   background: url('../images/hartford.jpg') 50% 50% / cover no-repeat;
   background-attachment: fixed;
-  height: calc(100% - 4.3rem);
+  // height: calc(100% - 4.3rem);
+  // height: calc(100vh - 69px);
+  height: 100vh;
   padding: 2rem;
   @include dark-overlay;
+  top: 0;
 
   header {
     z-index: 2;
@@ -186,7 +200,7 @@ nav {
 
   i {
     position: relative;
-    z-index: 1000;
+    z-index: 10;
     font-size: 4rem;
     text-align: center;
     height: 8rem;
@@ -612,6 +626,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+  html {
+    scroll-behavior: auto;
+  }
+
   .main-menu {
     display: flex;
     flex-direction: column;
