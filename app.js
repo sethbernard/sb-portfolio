@@ -21,12 +21,17 @@ app.post(
   [
     check('name')
       .notEmpty()
+      .trim()
+      .escape()
       .withMessage('Your name is required.'),
     check('email')
       .isEmail()
+      .normalizeEmail()
       .withMessage('Your email is required.'),
     check('text')
       .notEmpty()
+      .trim()
+      .escape()
       .withMessage('Please write a message for me.')
   ],
 
