@@ -4,8 +4,10 @@
   "description": "Work in Progress",
   "main": "app.js",
   "scripts": {
-    "dev": "concurrently \"parcel watch ./public/index.html\" \"node app.js\"",
-    "build": "concurrently \"parcel build ./public/index.html\" \"node app.js\"",
+    "dev": "concurrently \"parcel watch ./src/index.html\" \"node app.js\"",
+    "build": "concurrently \"parcel build ./src/index.html --out-dir=public\" \"node app.js\"",
+    "start": "node app.js",
+    "prestart": "parcel build ./src/index.html --out-dir=public",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,10 +27,9 @@
     "concurrently": "^5.1.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-validator": "^6.4.0"
-  },
-  "devDependencies": {
+    "express-validator": "^6.4.0",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.25.0"
-  }
+  },
+  "devDependencies": {}
 }
