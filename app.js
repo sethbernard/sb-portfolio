@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const PORT = process.env.port || 5000;
+const PORT = process.env.PORT || 5000;
 const bodyParser = require('body-parser');
 require('dotenv').config();
 const { check, validationResult } = require('express-validator');
