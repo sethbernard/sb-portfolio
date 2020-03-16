@@ -241,8 +241,8 @@ nav.hide {
 
 // My Work Section
 .work-section {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   align-items: center;
   padding-bottom: 3rem;
@@ -314,6 +314,7 @@ nav.hide {
   width: 65%;
   height: 100%;
   display: flex;
+  flex: 1;
 
   img.devices {
     max-width: 90%;
@@ -519,6 +520,7 @@ nav.hide {
 
 ::placeholder {
   color: darkgray;
+  font-family: 'Ubuntu';
 }
 
 footer {
@@ -550,7 +552,7 @@ footer {
   .work-section {
     flex-wrap: wrap;
     padding-top: 3rem;
-    height: auto;
+    min-height: auto;
   }
   .external-links {
     margin-bottom: 2rem;
@@ -560,7 +562,7 @@ footer {
   .work-mockup,
   .about-content {
     width: 100%;
-    height: auto;
+    // height: auto;
   }
   .work-description p {
     padding-left: 6rem;
@@ -584,6 +586,13 @@ footer {
 }
 
 @media (max-width: 991.98px) {
+  .hero {
+    background-image: url('../images/hartford.jpg') 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
+
   #skills {
     display: flex;
     flex-direction: column;
@@ -613,6 +622,16 @@ footer {
       margin: 0 auto;
       padding: 2rem;
 
+      input,
+      textarea {
+        border: 1px solid darkgray;
+        box-shadow: none;
+        -webkit-appearance: none;
+        &:focus {
+          border: 1px solid $main-theme-color;
+        }
+      }
+
       button {
         margin: 2rem auto 0rem;
       }
@@ -625,7 +644,7 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
   html {
     scroll-behavior: auto;
   }
@@ -701,7 +720,7 @@ footer {
   }
 
   .card {
-    width: 70vw;
+    width: 80vw;
     min-height: 80vw;
     margin-bottom: 2rem;
   }
@@ -711,11 +730,15 @@ footer {
   }
 
   .work-section {
-    height: auto;
+    min-width: auto;
+    min-height: auto;
     padding: 2rem 0;
+    // align-items: flex-start;
   }
 
   .work-description {
+    min-width: auto;
+    min-height: auto;
     h3 {
       font-size: $extra-small-heading;
     }
@@ -726,6 +749,12 @@ footer {
 
   .work-icons i {
     margin-bottom: 2rem;
+  }
+
+  .work-mockup {
+    flex: 1;
+    width: 100%;
+    align-items: flex-start;
   }
 
   // .work-icons i:nth-child(4) {
