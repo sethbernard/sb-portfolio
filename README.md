@@ -1,1 +1,3 @@
-Work in Progress
+# Live Website
+https://sethbernard.dev
+
