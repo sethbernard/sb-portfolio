@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}!`));
 
-// Sends contact form information to my email
+// Sends contact form information to email
 app.post(
   '/',
   [
@@ -40,8 +40,7 @@ app.post(
       to: process.env.MY_EMAIL,
       from: req.body.email,
       subject: `Portfolio Contact: ${req.body.name}`,
-      text: req.body.text,
-      html: `<strong>${req.body.text}</strong>`
+      text: req.body.text
     };
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -51,10 +50,8 @@ app.post(
     sgMail.send(sgMessage);
 
     return res.status(201).send({
-      message: 'Thank you for getting in touch. I will contact you soon!'
+      message: 'Thank you for getting in touch. I will contact you soon!',
     });
   }
 );
 
-//Kill server with ctrl + c
-process.on('SIGINT', () => process.exit(1));
