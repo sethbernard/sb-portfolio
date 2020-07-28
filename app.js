@@ -32,7 +32,7 @@ app.post(
       .notEmpty()
       .trim()
       .escape()
-      .withMessage('Please write a message for me.')
+      .withMessage('Please write a message for me.'),
   ],
 
   (req, res) => {
@@ -40,7 +40,7 @@ app.post(
       to: process.env.MY_EMAIL,
       from: req.body.email,
       subject: `Portfolio Contact: ${req.body.name}`,
-      text: req.body.text
+      text: req.body.text,
     };
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -54,4 +54,3 @@ app.post(
     });
   }
 );
-
