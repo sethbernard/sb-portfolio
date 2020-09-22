@@ -17,40 +17,40 @@ app.listen(PORT, () => console.log(`Server listening on port ${PORT}!`));
 
 // Sends contact form information to email
 app.post(
-  '/',
-  [
-    check('name')
-      .notEmpty()
-      .trim()
-      .escape()
-      .withMessage('Your name is required.'),
-    check('email')
-      .isEmail()
-      .normalizeEmail()
-      .withMessage('Your email is required.'),
-    check('text')
-      .notEmpty()
-      .trim()
-      .escape()
-      .withMessage('Please write a message for me.'),
-  ],
+    '/',
+    [
+        check('name')
+            .notEmpty()
+            .trim()
+            .escape()
+            .withMessage('Your name is required.'),
+        check('email')
+            .isEmail()
+            .normalizeEmail()
+            .withMessage('Your email is required.'),
+        check('text')
+            .notEmpty()
+            .trim()
+            .escape()
+            .withMessage('Please write a message for me.'),
+    ],
 
-  (req, res) => {
-    const sgMessage = {
-      to: process.env.MY_EMAIL,
-      from: req.body.email,
-      subject: `Portfolio Contact: ${req.body.name}`,
-      text: req.body.text,
-    };
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(422).send({ errors: errors.array() });
-    }
+    (req, res) => {
+        const sgMessage = {
+            to: process.env.MY_EMAIL,
+            from: req.body.email,
+            subject: `Portfolio Contact: ${req.body.name}`,
+            text: req.body.text,
+        };
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(422).send({ errors: errors.array() });
+        }
 
-    sgMail.send(sgMessage);
+        sgMail.send(sgMessage);
 
-    return res.status(201).send({
-      message: 'Thank you for getting in touch. I will contact you soon!',
-    });
-  }
+        return res.status(201).send({
+            message: 'Thank you for getting in touch. I will contact you soon!',
+        });
+    },
 );
