@@ -286,6 +286,11 @@ nav.hide {
             font-size: $icon-size;
             margin-right: 2rem;
         }
+
+        img {
+            width: 64px;
+            height: 64px;
+        }
     }
     .external-links {
         display: flex;
@@ -748,7 +753,8 @@ footer {
         }
     }
 
-    .work-icons i {
+    .work-icons i,
+    .work-icons img {
         margin-bottom: 2rem;
     }
 
