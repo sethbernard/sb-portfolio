@@ -436,7 +436,7 @@ nav.hide {
         padding-bottom: 2rem;
 
         h6 {
-            padding: 2rem 0;
+            padding: 0 0 2rem;
             text-align: center;
             font-size: 1.5rem;
         }
@@ -479,6 +479,7 @@ nav.hide {
                 border-width: 0;
                 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
                 border-radius: 4px;
+                font-family: 'Ubuntu', 'Roboto', sans-serif;
                 &:focus {
                     outline: none;
                     border: 1px solid $main-theme-color;
@@ -525,7 +526,6 @@ nav.hide {
 
 ::placeholder {
     color: darkgray;
-    font-family: 'Ubuntu';
 }
 
 footer {
@@ -618,7 +618,7 @@ footer {
         .contact-information {
             width: 75%;
 
-            h4 {
+            h6 {
                 margin: 0 auto;
             }
         }
@@ -780,9 +780,6 @@ footer {
             width: 100%;
             padding-right: 1rem;
             padding-left: 1rem;
-        }
-        h6 {
-            padding-top: 0;
         }
     }
 
